@@ -7,6 +7,8 @@ define([
   'collections/topics',
   'text!templates/topics/list.html'
 ], function($, _, Backbone, TopicsCollection, topicsListTemplate) {
+  'use strict';
+  
   var TopicsListView = Backbone.View.extend({
     el: $('#container'),
     
@@ -23,22 +25,21 @@ define([
       var step = max / 6;
       
       _.each(this.collection.models, function (topic) {
-        topic.setPopularityLevel(step)
-        
+        topic.setPopularityLevel(step);
       });
       
       this.loading.hide();
       this.render();
     },
     render: function() {
-      if (this.collection.length == 0) {
+      if (this.collection.length === 0) {
         this.loading.show();
         this.collection.fetch({
           reset: true,
           success: _.bind(this.fetchSuccess, this),
         });
         
-        return
+        return;
       }
       
       var compiledTemplate = _.template(topicsListTemplate, {topics: this.collection.models});

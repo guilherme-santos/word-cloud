@@ -1,0 +1,34 @@
+{
+  "globals"   : {
+    /* MOCHA */
+    "describe"   : false,
+    "it"         : false,
+    "before"     : false,
+    "beforeEach" : false,
+    "after"      : false,
+    "afterEach"  : false
+  },
+  "predef" : [
+    "define",
+    "require"
+  ],
+  "esnext": true,
+  "eqeqeq": true,
+  "eqnull": true,
+  "expr": true,
+  "immed": true,
+  "noarg": true,
+  "quotmark": "single",
+  "strict": true,
+  "browser": true,
+  "boss": true,
+  "curly": true,
+  "undef": true,
+  "unused": true,
+  "devel":false,
+  "jquery": true,
+  "evil": false,
+  "indent": 2,
+  "passfail": false,
+  "plusplus": false
+}

@@ -1,4 +1,4 @@
-// Filename: views/topics/list
+// Filename: views/topics/detail
 
 define([
   'jquery',
@@ -7,6 +7,8 @@ define([
   'models/topic',
   'text!templates/topics/detail.html'
 ], function($, _, Backbone, TopicModel, topicDetailTemplate) {
+  'use strict';
+  
   var TopicDetailView = Backbone.View.extend({
     events: {
       'click button#close': 'close'

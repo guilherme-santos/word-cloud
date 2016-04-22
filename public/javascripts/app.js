@@ -11,5 +11,7 @@ require.config({
 });
 
 require(['router'], function(Router) {
+  'use strict';
+  
   Router.initialize();
 });

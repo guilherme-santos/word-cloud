@@ -2,9 +2,10 @@
 
 define([
   'underscore',
-  'backbone',
-  'collections/topics'
-], function(_, Backbone, TopicsCollection) {
+  'backbone'
+], function(_, Backbone) {
+  'use strict';
+  
   var TopicModel = Backbone.Model.extend({
     setPopularityLevel: function (step) {
       var volume = this.get('volume');
@@ -14,11 +15,11 @@ define([
           continue;
         }
 
-        this.set('popularityLevel', i)
-        return
+        this.set('popularityLevel', i);
+        return;
       }
       
-      this.set('popularityLevel', 6)
+      this.set('popularityLevel', 6);
     }
   });
   return TopicModel;

@@ -14,7 +14,9 @@
   },
   "description": "",
   "main": "app.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "jshint": "^2.9.2"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/guilherme-santos/word-cloud.git"

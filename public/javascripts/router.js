@@ -7,6 +7,8 @@ define([
   'views/topics/list',
   'views/topics/detail'
 ], function($, _, Backbone, TopicsListView, TopicDetailView) {
+  'use strict';
+  
   var AppRouter = Backbone.Router.extend({
     routes: {
       'topics/:id': 'showDetail'
