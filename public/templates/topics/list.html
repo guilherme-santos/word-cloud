@@ -4,8 +4,8 @@
        var score = topic.get('sentimentScore');
        var sentimentScoreColor = score > 60 ? 'green' : score < 40 ? 'red' : 'none';
     %>
-    <li class="popularity-word-<%= topic.get('popularityLevel') %> sentiment-score-<%= sentimentScoreColor %>">
-      <a href="#/topics/<%= topic.get('id') %>">
+    <li>
+      <a href="#/topics/<%= topic.get('id') %>" class="popularity-word-<%= topic.get('popularityLevel') %> sentiment-score-<%= sentimentScoreColor %>">
         <%- topic.get('label') %></%->
       </a>
     </li>

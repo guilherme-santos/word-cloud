@@ -3,10 +3,6 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
-}
-
 .negative {
   color: #D84315;
 }
@@ -43,14 +39,14 @@ a {
   font-size: 69px;
 }
 
-.sentiment-score-green {
+a.sentiment-score-green {
   color: green;
 }
 
-.sentiment-score-red {
+a.sentiment-score-red {
   color: red;
 }
 
-.sentiment-score-none {
+a.sentiment-score-none {
   color: grey;
 }
