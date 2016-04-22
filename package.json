@@ -1,0 +1,32 @@
+{
+  "name": "word-cloud",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "morgan": "~1.6.1",
+    "mustache": "^2.2.1"
+  },
+  "description": "",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guilherme-santos/word-cloud.git"
+  },
+  "author": {
+    "name": "Guilherme Santos",
+    "email": "xguiga@gmail.com",
+    "url": "https://github.com/guilherme-santos"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guilherme-santos/word-cloud/issues"
+  },
+  "homepage": "https://github.com/guilherme-santos/word-cloud#readme"
+}
