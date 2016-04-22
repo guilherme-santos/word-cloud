@@ -1,0 +1,25 @@
+{
+  "name": "word-cloud",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    {
+      "name": "Guilherme Santos",
+      "email": "xguiga@gmail.com",
+      "url": "https://github.com/guilherme-santos"
+    }
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/guilherme-santos/word-cloud",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "^4.6.1"
+  }
+}
