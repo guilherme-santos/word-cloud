@@ -20,6 +20,10 @@
     "tests"
   ],
   "dependencies": {
-    "font-awesome": "^4.6.1"
+    "font-awesome": "^4.6.1",
+    "requirejs": "^2.2.0",
+    "underscore-amd": "^1.5.2",
+    "backbone-amd": "^1.1.0",
+    "jquery": "^2.2.3"
   }
 }
