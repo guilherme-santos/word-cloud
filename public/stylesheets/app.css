@@ -6,3 +6,51 @@ body {
 a {
   color: #00B7FF;
 }
+
+.negative {
+  color: #D84315;
+}
+
+.positive {
+  color: #4CAF50;
+}
+
+.neutral {
+  color: hsl(250, 20%, 80%);
+}
+
+.popularity-word-1 {
+  font-size: 14px;
+}
+
+.popularity-word-2 {
+  font-size: 25px;
+}
+
+.popularity-word-3 {
+  font-size: 36px;
+}
+
+.popularity-word-4 {
+  font-size: 47px;
+}
+
+.popularity-word-5 {
+  font-size: 58px;
+}
+
+.popularity-word-6 {
+  font-size: 69px;
+}
+
+.sentiment-score-green {
+  color: green;
+}
+
+.sentiment-score-red {
+  color: red;
+}
+
+.sentiment-score-none {
+  color: grey;
+}
