@@ -10,7 +10,10 @@
   },
   "predef" : [
     "define",
-    "require"
+    "require",
+    "expect",
+    "_",
+    "Backbone"
   ],
   "esnext": true,
   "eqeqeq": true,
