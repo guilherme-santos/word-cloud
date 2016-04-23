@@ -2,9 +2,21 @@ doctype html
 html
   head
     meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
     title Brandwatch WordCloud
+
+    link(rel='stylesheet', href='/libs/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet', href='/libs/bootstrap/dist/css/bootstrap-theme.css')
     link(rel='stylesheet', href='/stylesheets/app.css')
     link(rel='stylesheet', href='/libs/font-awesome/css/font-awesome.min.css')
     script(src='/libs/requirejs/require.js', data-main='javascripts/app')
+
   body
-    block content
+    .container
+      block content
+      hr
+      footer
+        p &copy; 2016 Guilherme Silveira dos Santos
+        em Run tests <a href='test/index.html'>clicking here</a>.

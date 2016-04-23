@@ -3,6 +3,10 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+footer {
+  padding: 30px 0;
+}
+
 .negative {
   color: #D84315;
 }
@@ -15,38 +19,47 @@ body {
   color: hsl(250, 20%, 80%);
 }
 
+div#cloud a {
+  font-size: inherit;
+  text-decoration: none;
+}
+
+div#cloud a:hover {
+  color: #90C5F0;
+}
+
 .popularity-word-1 {
-  font-size: 14px;
+  font-size: 100%;
 }
 
 .popularity-word-2 {
-  font-size: 25px;
+  font-size: 150%;
 }
 
 .popularity-word-3 {
-  font-size: 36px;
+  font-size: 200%;
 }
 
 .popularity-word-4 {
-  font-size: 47px;
+  font-size: 250%;
 }
 
 .popularity-word-5 {
-  font-size: 58px;
+  font-size: 300%;
 }
 
 .popularity-word-6 {
-  font-size: 69px;
+  font-size: 350%;
 }
 
-a.sentiment-score-green {
-  color: green;
+.sentiment-score-green {
+  color: #4AA035;
 }
 
-a.sentiment-score-red {
-  color: red;
+.sentiment-score-red {
+  color: #AF2200;
 }
 
-a.sentiment-score-grey {
-  color: grey;
+.sentiment-score-grey {
+  color: #69747F;
 }

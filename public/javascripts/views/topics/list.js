@@ -10,7 +10,7 @@ define([
   'use strict';
   
   var TopicsListView = Backbone.View.extend({
-    el: $('#container'),
+    el: $('#cloud'),
     
     initialize: function(){
       this.collection = new TopicsCollection();

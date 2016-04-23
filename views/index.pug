@@ -1,11 +1,17 @@
 extends layout
 
 block content
-  h1 Brandwatch Word Cloud
-  p#loading
-    i(class='fa fa-spinner fa-pulse fa-fw margin-bottom', aria-hidden='true')
-    span Loading topics...
+  .page-header
+    h1 Brandwatch WordCloud
+    p.lead This is a test code to validate some skills using node.js, backbone.js and javascript in general  
 
-  #detail
-  #container
-  
+  .row
+    .col-xs-12.col-sm-8
+      p#loading.lead
+        i(class='fa fa-spinner fa-pulse fa-fw margin-bottom', aria-hidden='true')
+        span Loading topics...
+
+      #cloud
+
+    .col-xs-6.col-sm-4
+      #detail
