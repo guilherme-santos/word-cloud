@@ -6,6 +6,7 @@ require.config({
     jquery: '../libs/jquery/dist/jquery',
     underscore: '../libs/underscore-amd/underscore',
     backbone: '../libs/backbone-amd/backbone',
+    jqcloud: '../libs/jqcloud2/dist/jqcloud',
     mocha: '../libs/mocha/mocha',
     chai: '../libs/chai/chai',
     'chai-jquery': '../libs/chai-jquery/chai-jquery',
@@ -25,16 +26,15 @@ require.config({
 });
 
 define(function(require) {
+  'use strict';
+
   var chai = require('chai');
   var mocha = require('mocha');
-  var jquery = require('jquery');
-  var chaiJQuery = require('chai-jquery');
-  
+  require('jquery');
+
   // Chai
-  var should = chai.should();
-  chai.use(chaiJQuery);
-  
-  expect = chai.expect
+  chai.use(require('chai-jquery'));
+  window.expect = chai.expect;
 
   mocha.setup('bdd');
   mocha.bail(false);
@@ -46,7 +46,7 @@ define(function(require) {
     'collections.spec',
     'models.spec',
     'views.spec',
-  ], function(require) {
+  ], function() {
     mocha.run();
   });
 });

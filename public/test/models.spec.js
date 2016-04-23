@@ -1,17 +1,18 @@
 define(function(require) {
-  
+  'use strict';
+
   var TopicModel = require('models/topic');
-  
+
   describe('TopicModel', function () {
 
     var model = new TopicModel();
     model.set('popularityStep', 5);
-    
+
     it('popularity level is 1 to negative number', function () {
       model.set('volume', -1);
       expect(model.get('popularityLevel')).to.be.equal(1);
     });
-    
+
     it('popularity level is 1 to zero', function () {
       model.set('volume', 0);
       expect(model.get('popularityLevel')).to.be.equal(1);
@@ -26,7 +27,7 @@ define(function(require) {
       model.set('volume', 5);
       expect(model.get('popularityLevel')).to.be.equal(1);
     });
-        
+
     it('popularity level is 2 to step + 1', function () {
       model.set('volume', 6);
       expect(model.get('popularityLevel')).to.be.equal(2);
@@ -41,7 +42,7 @@ define(function(require) {
       model.set('volume', 10);
       expect(model.get('popularityLevel')).to.be.equal(2);
     });
-        
+
     it('popularity level is 3 to 2*step + 1', function () {
       model.set('volume', 11);
       expect(model.get('popularityLevel')).to.be.equal(3);
@@ -71,7 +72,7 @@ define(function(require) {
       model.set('volume', 20);
       expect(model.get('popularityLevel')).to.be.equal(4);
     });
-    
+
     it('popularity level is 5 to 4*step + 1', function () {
       model.set('volume', 21);
       expect(model.get('popularityLevel')).to.be.equal(5);
@@ -86,7 +87,7 @@ define(function(require) {
       model.set('volume', 25);
       expect(model.get('popularityLevel')).to.be.equal(5);
     });
-    
+
     it('popularity level is 6 to 5*step + 1', function () {
       model.set('volume', 26);
       expect(model.get('popularityLevel')).to.be.equal(6);
@@ -101,44 +102,44 @@ define(function(require) {
       model.set('volume', 30);
       expect(model.get('popularityLevel')).to.be.equal(6);
     });
-    
+
     it('popularity level is 6 to 6*step + 1', function () {
       model.set('volume', 31);
       expect(model.get('popularityLevel')).to.be.equal(6);
     });
-    
+
     it('popularity level is 6 to bigger than 6*step', function () {
       model.set('volume', 35);
       expect(model.get('popularityLevel')).to.be.equal(6);
     });
-    
+
     it('sentiment score color is green to score bigger than 60', function () {
       model.set('sentimentScore', 61);
       expect(model.get('sentimentScoreColor')).to.be.equal('green');
-      
+
       model.set('sentimentScore', 70);
       expect(model.get('sentimentScoreColor')).to.be.equal('green');
     });
-    
+
     it('sentiment score color is red to score smaller than 40', function () {
       model.set('sentimentScore', 39);
       expect(model.get('sentimentScoreColor')).to.be.equal('red');
-      
+
       model.set('sentimentScore', 20);
       expect(model.get('sentimentScoreColor')).to.be.equal('red');
     });
-    
+
     it('sentiment score color is gray to score between 40 and 60', function () {
       model.set('sentimentScore', 40);
       expect(model.get('sentimentScoreColor')).to.be.equal('grey');
-      
+
       model.set('sentimentScore', 60);
       expect(model.get('sentimentScoreColor')).to.be.equal('grey');
-      
+
       model.set('sentimentScore', 50);
       expect(model.get('sentimentScoreColor')).to.be.equal('grey');
     });
-    
+
   });
-  
+
 });

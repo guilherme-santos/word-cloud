@@ -8,13 +8,13 @@ define([
   'text!templates/topics/detail.html'
 ], function($, _, Backbone, TopicModel, topicDetailTemplate) {
   'use strict';
-  
+
   var TopicDetailView = Backbone.View.extend({
     template: _.template(topicDetailTemplate),
     events: {
       'click button.close': 'close'
     },
-    
+
     render: function() {
       var compiledTemplate = this.template({topic: this.model.attributes});
       this.$el.html(compiledTemplate);
@@ -24,6 +24,6 @@ define([
       this.trigger('close');
     }
   });
-  
+
   return TopicDetailView;
 });

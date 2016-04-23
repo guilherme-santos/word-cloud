@@ -6,12 +6,12 @@ define([
   'backbone',
   'collections/topics',
   'jqcloud'
-], function($, _, Backbone, TopicsCollection, jQCloud) {
+], function($, _, Backbone, TopicsCollection) {
   'use strict';
-  
+
   var TopicsListView = Backbone.View.extend({
     el: $('#cloud'),
-    
+
     initialize: function(){
       this.collection = new TopicsCollection();
       this.loading = $('p#loading');
@@ -23,11 +23,11 @@ define([
         return topic.volume;
       }).volume;
       var step = max / 6;
-      
+
       _.each(this.collection.models, function (topic) {
         topic.set('popularityStep', step);
       });
-      
+
       this.loading.hide();
       this.render();
     },
@@ -38,15 +38,15 @@ define([
           reset: true,
           success: _.bind(this.fetchSuccess, this),
         });
-        
+
         return;
       }
-      
+
       this.$el.jQCloud(_.map(this.collection.models, function(topic) {
         var classes = [
           'popularity-word-' + topic.get('popularityLevel'),
           'sentiment-score-' + topic.get('sentimentScoreColor'),
-        ]
+        ];
 
         return {
           text: topic.get('label'),
@@ -65,6 +65,6 @@ define([
       });
     }
   });
-  
+
   return TopicsListView;
 });

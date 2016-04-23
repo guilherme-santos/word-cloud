@@ -8,12 +8,12 @@ define([
   'views/topics/detail'
 ], function($, _, Backbone, TopicsListView, TopicDetailView) {
   'use strict';
-  
+
   var AppRouter = Backbone.Router.extend({
     routes: {
       'topics/:id': 'showDetail'
     },
-    
+
     initialize: function() {
       // Topics must be all visible
       this.topicsListView = new TopicsListView();
@@ -30,11 +30,11 @@ define([
         el: $('#detail'),
         model: this.topicsListView.collection.get(id),
       });
-      
+
       this.topicDetailView.on('close', _.bind(function() {
         this.navigate('');
       }, this));
-      
+
       this.topicDetailView.render();
     }
   });
