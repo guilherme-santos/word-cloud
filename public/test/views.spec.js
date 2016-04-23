@@ -46,10 +46,11 @@ define(function(require) {
     });
     
     it('calling render for the first time load topics froms server', function () {
-      listView.collection.reset();
+      listView.collection.reset(null);
+      expect(listView.collection.length).to.be.equal(0);
       listView.collection.fetch = function(options) {
         expect(options).to.have.property('reset');
-        expect(options['reset']).to.be.true;
+        expect(options.reset).to.be.true;
         listView.collection.reset([
           {volume: 162},
           {volume: 100},
@@ -89,8 +90,9 @@ define(function(require) {
     it('close trigger close event', function () {
       var control = 1
       detailView.on('close', function() {
-        expect(control++).to.be.equal(1);
+        expect(control).to.be.equal(2);
       });
+      control++;
       detailView.close();
     });
     
