@@ -33,7 +33,8 @@ define(function(require) {
     
     it('if close was clicked route back to default route', function () {
       router.navigate('/topics/1234__test');
-      router.bind('route:showDetail', function(id) {
+      router.bind('route:showDetail', function() {
+        expect(Backbone.History.getFragment()).to.equal('/topics/1234__test');
         router.topicDetailView.close();
         expect(Backbone.History.getFragment()).to.equal('');
       });
