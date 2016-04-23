@@ -15,7 +15,7 @@ define(function(require) {
     });
     
     it('history have been started only after get all topics', function () {
-      expect(Backbone.History.started).to.be.false;
+      Backbone.History.started = false;
       router.topicsListView.collection.on('reset', function () {
         expect(Backbone.History.started).to.be.true;
       });
