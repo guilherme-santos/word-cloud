@@ -6,7 +6,8 @@ require.config({
     templates: '/templates',
     jquery: '/libs/jquery/dist/jquery',
     underscore: '/libs/underscore-amd/underscore',
-    backbone: '/libs/backbone-amd/backbone'
+    backbone: '/libs/backbone-amd/backbone',
+    jqcloud: '/libs/jqcloud2/dist/jqcloud'
   }
 });
 

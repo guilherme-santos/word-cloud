@@ -5,8 +5,8 @@ define([
   'underscore',
   'backbone',
   'collections/topics',
-  'text!templates/topics/list.html'
-], function($, _, Backbone, TopicsCollection, topicsListTemplate) {
+  'jqcloud'
+], function($, _, Backbone, TopicsCollection, jQCloud) {
   'use strict';
   
   var TopicsListView = Backbone.View.extend({
@@ -16,7 +16,7 @@ define([
       this.collection = new TopicsCollection();
       this.loading = $('p#loading');
     },
-    
+
     fetchSuccess: function () {
       // Get steps to decide between popularities
       var max = _.max(this.collection.toJSON(), function (topic) {
@@ -42,8 +42,27 @@ define([
         return;
       }
       
-      var compiledTemplate = _.template(topicsListTemplate, {topics: this.collection.models});
-      this.$el.append(compiledTemplate);
+      this.$el.jQCloud(_.map(this.collection.models, function(topic) {
+        var classes = [
+          'popularity-word-' + topic.get('popularityLevel'),
+          'sentiment-score-' + topic.get('sentimentScoreColor'),
+        ]
+
+        return {
+          text: topic.get('label'),
+          weight: topic.get('popularityLevel'),
+          link: '#/topics/' + topic.get('id'),
+          html: {
+            class: classes.join(' '),
+          },
+        };
+      }), {
+        width: this.$el.width(),
+        height: 300,
+        delay: 50,
+        shape: 'rectangular',
+        autoResize: true,
+      });
     }
   });
   

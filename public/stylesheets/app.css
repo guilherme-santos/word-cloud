@@ -78,13 +78,13 @@ footer {
 div#cloud a {
   text-decoration: none;
 }
-div#cloud a .sentiment-score-green {
+div#cloud .sentiment-score-green a {
   color: #468847;
 }
-div#cloud a .sentiment-score-red {
+div#cloud .sentiment-score-red a {
   color: #a94442;
 }
-div#cloud a .sentiment-score-grey {
+div#cloud .sentiment-score-grey a {
   color: #777;
 }
 div#cloud a:hover {
@@ -93,20 +93,20 @@ div#cloud a:hover {
 
 /* Font size to popularity score */
 .popularity-word-1 {
-  font-size: 100%;
+  font-size: 120%;
 }
 .popularity-word-2 {
-  font-size: 150%;
+  font-size: 170%;
 }
 .popularity-word-3 {
-  font-size: 200%;
+  font-size: 220%;
 }
 .popularity-word-4 {
-  font-size: 250%;
+  font-size: 270%;
 }
 .popularity-word-5 {
-  font-size: 300%;
+  font-size: 320%;
 }
 .popularity-word-6 {
-  font-size: 350%;
+  font-size: 370%;
 }

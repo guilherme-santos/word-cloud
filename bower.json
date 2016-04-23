@@ -25,7 +25,8 @@
     "underscore-amd": "^1.5.2",
     "backbone-amd": "^1.1.0",
     "jquery": "^2.2.3",
-    "text": "requirejs/text#^2.0.15"
+    "text": "requirejs/text#^2.0.15",
+    "jqcloud2": "^2.0.1"
   },
   "devDependencies": {
     "mocha": "^2.4.5",
