@@ -12,7 +12,7 @@ define([
   var TopicDetailView = Backbone.View.extend({
     template: _.template(topicDetailTemplate),
     events: {
-      'click button#close': 'close'
+      'click button.close': 'close'
     },
     
     render: function() {

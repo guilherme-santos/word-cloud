@@ -2,64 +2,111 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-
 footer {
   padding: 30px 0;
 }
 
-.negative {
-  color: #D84315;
+/* Colors of sentiment score */
+.sentiment-score-green {
+  color: #468847;
+}
+.sentiment-score-red {
+  color: #a94442;
+}
+.sentiment-score-grey {
+  color: #777;
 }
 
-.positive {
-  color: #4CAF50;
+/* Detail about topic */
+.detail-info {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+}
+.detail-info h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+.detail-info p:last-child {
+  margin-bottom: 0;
+}
+.detail-info-green {
+  border-left-color: #468847;
+}
+.detail-info-green h4 {
+  color: #468847;
+}
+.detail-info-red {
+  border-left-color: #a94442;
+}
+.detail-info-red h4 {
+  color: #a94442;
+}
+.detail-info-grey {
+  border-left-color: #777;
+}
+.detail-info-grey h4 {
+  color: #777;
+}
+.detail-info dl dt {
+  float: left;
+  width: 70px;
+}
+.detail-info dl dd {
+  text-align: right;
+  width: 115px;
+}
+.detail-info dl .lead {
+  margin-bottom: 0;
+  font-size: 16px;
+}
+.detail-info dl dt.lead {
+  font-weight: bold;
 }
 
-.neutral {
-  color: hsl(250, 20%, 80%);
+/* Close button of detail */
+.detail-info button.close {
+  float: right;
+  position: relative;
+  top: -2px;
 }
 
+/* Div cloud */
 div#cloud a {
-  font-size: inherit;
   text-decoration: none;
 }
-
+div#cloud a .sentiment-score-green {
+  color: #468847;
+}
+div#cloud a .sentiment-score-red {
+  color: #a94442;
+}
+div#cloud a .sentiment-score-grey {
+  color: #777;
+}
 div#cloud a:hover {
-  color: #90C5F0;
+  color: #286090;
 }
 
+/* Font size to popularity score */
 .popularity-word-1 {
   font-size: 100%;
 }
-
 .popularity-word-2 {
   font-size: 150%;
 }
-
 .popularity-word-3 {
   font-size: 200%;
 }
-
 .popularity-word-4 {
   font-size: 250%;
 }
-
 .popularity-word-5 {
   font-size: 300%;
 }
-
 .popularity-word-6 {
   font-size: 350%;
-}
-
-.sentiment-score-green {
-  color: #4AA035;
-}
-
-.sentiment-score-red {
-  color: #AF2200;
-}
-
-.sentiment-score-grey {
-  color: #69747F;
 }
