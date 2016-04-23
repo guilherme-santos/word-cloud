@@ -25,7 +25,7 @@ define([
       var step = max / 6;
       
       _.each(this.collection.models, function (topic) {
-        topic.setPopularityLevel(step);
+        topic.set('popularityStep', step);
       });
       
       this.loading.hide();
