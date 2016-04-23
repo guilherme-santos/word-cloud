@@ -10,12 +10,13 @@ define([
   'use strict';
   
   var TopicDetailView = Backbone.View.extend({
+    template: _.template(topicDetailTemplate),
     events: {
       'click button#close': 'close'
     },
     
     render: function() {
-      var compiledTemplate = _.template(topicDetailTemplate, {topic: this.model.attributes});
+      var compiledTemplate = this.template({topic: this.model.attributes});
       this.$el.html(compiledTemplate);
     },
     close: function () {
