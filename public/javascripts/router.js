@@ -12,36 +12,32 @@ define([
   var AppRouter = Backbone.Router.extend({
     routes: {
       'topics/:id': 'showDetail'
+    },
+    
+    initialize: function() {
+      // Topics must be all visible
+      this.topicsListView = new TopicsListView();
+
+      // Wait until read data from server before start router
+      this.topicsListView.collection.on('reset', function () {
+        Backbone.history.start();
+      });
+
+      this.topicsListView.render();
+    },
+    showDetail: function(id) {
+      this.topicDetailView = new TopicDetailView({
+        el: $('#detail'),
+        model: this.topicsListView.collection.get(id),
+      });
+      
+      this.topicDetailView.on('close', _.bind(function() {
+        this.navigate('');
+      }, this));
+      
+      this.topicDetailView.render();
     }
   });
 
-  var initialize = function(){
-    var appRouter = new AppRouter();
-    
-    // Topics must be all visible
-    var topicsListView = new TopicsListView();
-    topicsListView.render();
-    
-    // Wait until read data from server before start router
-    topicsListView.collection.on('reset', function () {
-      Backbone.history.start();
-    });
-    
-    appRouter.on('route:showDetail', function(id) {
-      var topicDetailView = new TopicDetailView({
-        el: $('#detail'),
-        model: topicsListView.collection.get(id),
-      });
-      
-      topicDetailView.on('close', _.bind(function() {
-        appRouter.navigate('');
-      }, this));
-      
-      topicDetailView.render();
-    });
-  };
-  
-  return {
-    initialize: initialize
-  };
+  return AppRouter;
 });
